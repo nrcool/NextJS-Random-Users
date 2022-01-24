@@ -10,8 +10,8 @@ export default function FilterBar() {
   <select className={styles.select} onChange={(e)=>setSelect(e.target.value)} defaultValue="name">
     <option value="name">Name</option>
     <option value="email">Email</option>
-    <option value="country">City</option>
-    <option value="city">Country</option>
+    <option value="city">City</option>
+    <option value="country">Country</option>
 
   </select>
 </div>

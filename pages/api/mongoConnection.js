@@ -1,6 +1,6 @@
 import {MongoClient} from "mongodb"
 
-const url = "mongodb+srv://nrcool:test123@cluster0.yxxrz.mongodb.net/users-db?retryWrites=true&w=majority"
+const url = process.env.NEXT_APP_MONGI_URI
 const client = new MongoClient(url)
 
 export default client

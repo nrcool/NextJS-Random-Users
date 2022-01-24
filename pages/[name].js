@@ -15,14 +15,7 @@ export const getStaticPaths=async ()=>{
     const paths= result.map(user=>({params:{id:user.id.toString()}}))
     return {paths,fallback:false}
 }
-
-export const getStaticProps=async ({params})=>{
-console.log(params, "in staticprops")
-const res= await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
-    const result= await res.json()
-    return {props:{result}}
-
-} */
+*/
 
 export default function User(props) {
     const route= useRouter()

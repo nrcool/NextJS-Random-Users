@@ -13,7 +13,6 @@ export default function Container({children}) {
 
    
     useEffect(()=>{
-        console.log("trigger")
         fetch(`api/users/${page}`)
         .then(res=>res.json())
         .then(final=>{
@@ -26,13 +25,8 @@ export default function Container({children}) {
     },[page])
 
     useEffect(()=>{
-        setUpdatedUsers(users.sort((a,b)=>{
-            if(a[select].toLowerCase()>b[select].toLowerCase()){
-                return 1
-            }else{
-                return -1
-            }       
-        }))
+        
+        setUpdatedUsers(users.sort((a,b) => (a[select] > b[select]) ? 1 : ((b[select] > a[select]) ? -1 : 0)))
     },[select])
 
     return (
