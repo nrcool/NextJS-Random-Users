@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "../styles/style.module.css";
 import countryFlagEmoji from "country-flag-emoji";
+import ReactCountryFlag from "react-country-flag";
 
 export default function User({ user, index }) {
   return (
@@ -18,7 +19,15 @@ export default function User({ user, index }) {
         <h3>{user.email} &#x1F4E7;</h3>
         <p>
           {user.location.city}, {user.location.country}{" "}
-          {countryFlagEmoji.get(user.nat).emoji}
+          <ReactCountryFlag
+            countryCode={user.nat}
+            svg
+            style={{
+              width: "2em",
+              height: "2em",
+            }}
+            title={user.nat}
+          />
         </p>
       </div>
     </div>
