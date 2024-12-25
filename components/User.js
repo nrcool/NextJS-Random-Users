@@ -8,7 +8,6 @@ export default function User({ user, index }) {
   return (
     <div className={index % 2 === 0 ? styles.userleft : styles.userright}>
       <div className={styles.image}>
-        {/*    <img src={user.picture.large} width="100%" alt="" /> */}
         <Image src={user.picture.large} width={500} height={500} />
       </div>
       <div className={styles.content}>
