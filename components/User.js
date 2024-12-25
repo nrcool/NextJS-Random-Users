@@ -8,9 +8,7 @@ export default function User({ user, index }) {
   return (
     <div className={index % 2 === 0 ? styles.userleft : styles.userright}>
       <div className={styles.image}>
-        <Link href={`/${user.name.first}`}>
-          <img src={user.picture.large} width="100%" alt="" />
-        </Link>
+        <img src={user.picture.large} width="100%" alt="" />
       </div>
       <div className={styles.content}>
         <h2>
