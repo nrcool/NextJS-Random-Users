@@ -14,7 +14,6 @@ export default function Container({ children }) {
     fetch(`api/users/${page}`)
       .then((res) => res.json())
       .then((final) => {
-        console.log(final.result);
         setData(final.result);
         setUsers([...users, ...final.result.users]);
         setUpdatedUsers([...users, ...final.result.users]);
@@ -49,8 +48,6 @@ export default function Container({ children }) {
       })
     );
   }, [select]);
-
-  console.log(users);
 
   return (
     <MyContext.Provider
