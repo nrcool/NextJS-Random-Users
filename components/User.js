@@ -7,8 +7,7 @@ import Image from "next/image";
 export default function User({ user, index }) {
   return (
     <div className={index % 2 === 0 ? styles.userleft : styles.userright}>
-      <h1>work</h1>
-      {/*  <div className={styles.image}>
+      <div className={styles.image}>
         <Image src={user.picture.large} width={500} height={500} />
       </div>
       <div className={styles.content}>
@@ -28,7 +27,7 @@ export default function User({ user, index }) {
             title={user.nat}
           />
         </p>
-      </div> */}
+      </div>
     </div>
   );
 }
