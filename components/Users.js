@@ -40,9 +40,9 @@ export default function Users() {
 
   return (
     <div className="users">
-      {updatedUsers.map((user, index) => {
+      {/*   {updatedUsers.map((user, index) => {
         return <User key={user.name.first} user={user} index={index} />;
-      })}
+      })} */}
       <span className="loading" ref={refUser}>
         {loading
           ? "Loading ..."
