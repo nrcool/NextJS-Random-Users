@@ -2,12 +2,14 @@
 import React from "react";
 import styles from "../styles/style.module.css";
 import ReactCountryFlag from "react-country-flag";
+import Image from "next/image";
 
 export default function User({ user, index }) {
   return (
     <div className={index % 2 === 0 ? styles.userleft : styles.userright}>
       <div className={styles.image}>
-        <img src={user.picture.large} width="100%" alt="" />
+        {/*    <img src={user.picture.large} width="100%" alt="" /> */}
+        <Image src={user.picture.large} width={500} height={500} />
       </div>
       <div className={styles.content}>
         <h2>
