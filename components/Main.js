@@ -1,6 +1,6 @@
 import React from "react";
-import FilterBar from './FilterBar'
-import Users from './Users'
+import FilterBar from "./FilterBar";
+import Users from "./Users";
 export default function Main() {
   return (
     <div>
