@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../styles/style.module.css";
-import countryFlagEmoji from "country-flag-emoji";
 import ReactCountryFlag from "react-country-flag";
 
 export default function User({ user, index }) {

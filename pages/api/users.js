@@ -5,7 +5,6 @@ export default async function handler(req, res) {
   const collection = db.collection(process.env.NEXT_APP_COL_NAME);
   /* const users=await collection.findOne({page:1}) */
   const users = await collection.find().toArray();
-  console.log(users);
   res.send({ users });
   client.close();
 }

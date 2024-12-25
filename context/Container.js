@@ -7,7 +7,6 @@ export default function Container({ children }) {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
-  const [about, setAbout] = useState(false);
   const [updatedUsers, setUpdatedUsers] = useState([]);
   const [select, setSelect] = useState("name");
 
@@ -61,8 +60,6 @@ export default function Container({ children }) {
         setLoading,
         page,
         setPage,
-        about,
-        setAbout,
         setSelect,
         select,
       }}
